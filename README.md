@@ -7,7 +7,7 @@ $ composer require mcs/html-to-pdf
 ```
 
 Features:
- * Convert an html string to a pdf string
+ * Convert an html string to a pdf string using wkhtmltopdf
  * Does not use temporary files
 
 Basic usage:
