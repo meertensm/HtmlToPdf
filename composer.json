@@ -1,6 +1,6 @@
 {
     "name": "mcs/html-to-pdf",
-    "description": "Convert a html string to a pdf string",
+    "description": "Convert an html string to a pdf string",
     "license": "MIT",
     "keywords": ["html to pdf", "html 2 pdf"],
     "authors": [
