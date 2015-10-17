@@ -1,9 +1,9 @@
 # HtmlToPdf
-[![Latest Stable Version](https://poser.pugx.org/mcs/HtmlToPdf/v/stable)](https://packagist.org/packages/mcs/HtmlToPdf) [![Total Downloads](https://poser.pugx.org/mcs/HtmlToPdf/downloads)](https://packagist.org/packages/mcs/HtmlToPdf) [![Latest Unstable Version](https://poser.pugx.org/mcs/HtmlToPdf/v/unstable)](https://packagist.org/packages/mcs/HtmlToPdf) [![License](https://poser.pugx.org/mcs/HtmlToPdf/license)](https://packagist.org/packages/mcs/HtmlToPdf)
+[![Latest Stable Version](https://poser.pugx.org/mcs/html-to-pdf/v/stable)](https://packagist.org/packages/mcs/html-to-pdf) [![Total Downloads](https://poser.pugx.org/mcs/html-to-pdf/downloads)](https://packagist.org/packages/mcs/html-to-pdf) [![Latest Unstable Version](https://poser.pugx.org/mcs/html-to-pdf/v/unstable)](https://packagist.org/packages/mcs/html-to-pdf) [![License](https://poser.pugx.org/mcs/html-to-pdf/license)](https://packagist.org/packages/mcs/html-to-pdf)
 
 Installation:
 ```bash
-$ composer require mcs/HtmlToPdf
+$ composer require mcs/html-to-pdf
 ```
 
 Features:

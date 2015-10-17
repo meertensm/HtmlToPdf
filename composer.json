@@ -1,5 +1,5 @@
 {
-    "name": "mcs/HtmlToPdf",
+    "name": "mcs/html-to-pdf",
     "description": "Convert a html string to a pdf string",
     "license": "MIT",
     "keywords": ["html to pdf", "html 2 pdf"],
