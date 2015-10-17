@@ -16,7 +16,7 @@
         $pdf = new HtmlToPdf($html, $pathToWkhtmltopdf);
 
         // Add a command before the wkhtmltopdf command
-        $pdf->addBeforeCommand('unset DYLD_LIBRARY_PATH');
+        // $pdf->addBeforeCommand('unset DYLD_LIBRARY_PATH');
 
         // Add wkhtmltopdf parameters, second parameter is optional. See: http://wkhtmltopdf.org/usage/wkhtmltopdf.txt
         $pdf->setParam('grayscale');
