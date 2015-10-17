@@ -1,0 +1,21 @@
+{
+    "name": "mcs/HtmlToPdf",
+    "description": "Convert a html string to a pdf string",
+    "license": "MIT",
+    "keywords": ["html to pdf", "html 2 pdf"],
+    "authors": [
+        {
+            "name": "Michiel Meertens",
+            "email": "meertensmichiel28@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">= 5.4"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "MCS\\": "src"
+        }
+    }
+}
