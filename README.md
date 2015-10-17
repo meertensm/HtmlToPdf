@@ -13,8 +13,6 @@ Features:
 Basic usage:
 
 ```php
-require_once 'vendor/autoload.php';
-
 use \MCS\HtmlToPdf;
 
 try{
@@ -45,7 +43,7 @@ try{
     $pathToWkhtmltopdf = '/usr/local/bin/wkhtmltopdf';
 
     // Initialise
-    $pdf = new HtmlToPdf('<html><body>Hi!<body></html>', '/usr/local/bin/wkhtmltopdf');
+    $pdf = new HtmlToPdf($html, $pathToWkhtmltopdf);
 
     // Add a command before the wkhtmltopdf command
     $pdf->addBeforeCommand('unset DYLD_LIBRARY_PATH');
