@@ -2,8 +2,6 @@
 
     require_once 'vendor/autoload.php';
 
-    use \MCS\HtmlToPdf;
-
     try{
 
         //Get your html string
@@ -13,7 +11,7 @@
         $pathToWkhtmltopdf = '/usr/local/bin/wkhtmltopdf';
 
         // Initialise
-        $pdf = new HtmlToPdf($html, $pathToWkhtmltopdf);
+        $pdf = new MCS\HtmlToPdf($html, $pathToWkhtmltopdf);
 
         // Add a command before the wkhtmltopdf command
         // $pdf->addBeforeCommand('unset DYLD_LIBRARY_PATH');

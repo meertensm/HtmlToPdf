@@ -1,4 +1,5 @@
-<?php namespace MCS;
+<?php 
+namespace MCS;
  
 use Exception;
 
@@ -10,16 +11,11 @@ class HtmlToPdf{
         2 => ['pipe', 'w']
     ];
     
-    protected $wkhtmltopdfPath = null;
-    
-    protected $cmdPrefix = [];
-    
     protected $wkhtmltopdfParams = ['quiet'];
-    
+    protected $cmdPrefix = [];
+    protected $wkhtmltopdfPath = null;
     protected $html = null;
-    
     protected $command = null;
-    
     protected $pdf = null;
     
     /**
@@ -27,10 +23,10 @@ class HtmlToPdf{
      */
     public function __construct($html, $path)
     {
-        if (empty($html)){
+        if (empty($html)) {
             throw new Exception('Html is empty');     
         }
-        if (empty($path)){
+        if (empty($path)) {
             throw new Exception('Wkhtmltopdf path is empty');     
         }
         $this->html = $html;
@@ -45,8 +41,8 @@ class HtmlToPdf{
      */
     public function setParam($name, $value = false)
     {
-     $this->wkhtmltopdfParams[] = $name . ( $value ? ' ' . $value : null );
-     $this->wkhtmltopdfParams = array_keys(array_flip($this->wkhtmltopdfParams));    
+        $this->wkhtmltopdfParams[] = $name . ($value ? ' ' . $value : null);
+        $this->wkhtmltopdfParams = array_keys(array_flip($this->wkhtmltopdfParams));    
     }
    
     /**
@@ -55,7 +51,7 @@ class HtmlToPdf{
      */
     public function generate()
     {
-        if (count($this->cmdPrefix)){
+        if (count($this->cmdPrefix)) {
             $this->command .= implode(';' , $this->cmdPrefix) . '; ';  
         }
         $this->command .= $this->wkhtmltopdfPath . ' --' . implode(' --', $this->wkhtmltopdfParams) . ' - -';
@@ -64,7 +60,7 @@ class HtmlToPdf{
         fclose($pipes[0]);
         $this->pdf = stream_get_contents($pipes[1]);
         $errors = stream_get_contents($pipes[2]);
-        if ($errors){
+        if ($errors) {
             $errors = ucfirst(strtr($errors, [
                 'sh: wkhtmltopdf: ' => '',
                 PHP_EOL => ''
@@ -84,6 +80,4 @@ class HtmlToPdf{
     {
         $this->cmdPrefix[] = $command;
     }
-    
- 
 }

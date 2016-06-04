@@ -13,11 +13,9 @@ Features:
 Basic usage:
 
 ```php
-use \MCS\HtmlToPdf;
-
 try{
 
-    $pdf = new HtmlToPdf('<html><body>Hi!<body></html>', '/usr/local/bin/wkhtmltopdf');
+    $pdf = new MCS\HtmlToPdf('<html><body>Hi!<body></html>', '/usr/local/bin/wkhtmltopdf');
 
     header('Content-Type: application/pdf');
 
@@ -32,8 +30,6 @@ catch(Exception $e){
 Advanced usage:
 
 ```php
-use \MCS\HtmlToPdf;
-
 try{
 
     //Get your html string
@@ -43,7 +39,7 @@ try{
     $pathToWkhtmltopdf = '/usr/local/bin/wkhtmltopdf';
 
     // Initialise
-    $pdf = new HtmlToPdf($html, $pathToWkhtmltopdf);
+    $pdf = new MCS\HtmlToPdf($html, $pathToWkhtmltopdf);
 
     // Add a command before the wkhtmltopdf command
     $pdf->addBeforeCommand('unset DYLD_LIBRARY_PATH');
